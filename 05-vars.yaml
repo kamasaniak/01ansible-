@@ -1,3 +1,4 @@
+---
 - name: variables 
   hosts: local
   connection: local
@@ -6,7 +7,7 @@
     DURATION: 120HRS
     TRAINER: Shivakumar student rajendra
 
-  taska:
+  tasks:
   - name: print the variables
     ansible.building.debug:
     msg: "Course is {{ COURSE }}, Duration is {{ 120HRS }}, Trainer is {{ Trainer }}"
