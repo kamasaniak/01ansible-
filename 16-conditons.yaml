@@ -1,0 +1,11 @@
+- name: Inatsll Nginx
+  hosts: web
+  become: yes
+  tasks:
+  - name: install nginx if RHEL
+    ansible.builtin.debug:
+      name: nginx
+      state: installed
+    when: ansible_os_family == "RedHat"
+    
+
