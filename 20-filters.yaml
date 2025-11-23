@@ -1,0 +1,13 @@
+- name: filters 
+  hosts: local
+  connection: local 
+  tasks:
+  - name: handle undefiend variable 
+    ansible:builtin:debug:
+    msg: "Hello {{ persion | default ('Ramesh') }}"
+
+  - name: convert string to list 
+    vars:
+      fruits: "apple, banana, orang" # string
+    ansible.builtin.debug:
+      msg: "Fruits are: {{ fruits | split(',') }}"
