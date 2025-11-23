@@ -43,8 +43,8 @@
     tags:
     - lowertoupper
     vars:
-    name: "Sivskumar Reddy M"
+      name: "Sivskumar Reddy M"
   ansible.builtin.debug:
-    msg: "Hello {{ name | upper}}"
+      msg: "Hello {{ name | upper}}"
 
-    
+
