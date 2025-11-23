@@ -2,7 +2,7 @@
   hosts: local
   connection: local 
   tasks:
-  - name: handle undefiend variable 
+  - name: handle undefine variable 
     ansible:builtin:debug:
     msg: "Hello {{ persion | default ('Ramesh') }}"
 
